@@ -5,9 +5,9 @@ from flask import Flask, jsonify
 import sys
 
 # load modules
-from src.endpoints.blueprint_x import blueprint_x
-from src.endpoints.blueprint_y import blueprint_y
-from src.endpoints.swagger import swagger_ui_blueprint, SWAGGER_URL
+from endpoints.blueprint_x import blueprint_x
+from endpoints.blueprint_y import blueprint_y
+from endpoints.swagger import swagger_ui_blueprint, SWAGGER_URL
 
 # init Flask app
 app = Flask(__name__)
@@ -16,7 +16,7 @@ app = Flask(__name__)
 app.register_blueprint(blueprint_x, url_prefix="/api/v1/path_for_blueprint_x")
 app.register_blueprint(blueprint_y, url_prefix="/api/v1/path_for_blueprint_y")
 
-from src.api_spec import spec
+from api_spec import spec
 # register all swagger documented functions here
 
 with app.test_request_context():

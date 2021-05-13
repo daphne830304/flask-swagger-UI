@@ -10,7 +10,7 @@ from marshmallow import Schema, fields
 spec = APISpec(
     title="My App",
     version="1.0.0",
-    openapi_version="3.0.2",
+    openapi_version="3.0.1",
     plugins=[FlaskPlugin(), MarshmallowPlugin()],
 )
 
